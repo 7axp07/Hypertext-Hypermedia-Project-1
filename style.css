@@ -53,14 +53,12 @@ h1 {
 	padding: 15px;
 }
 
-
-
 a {
 	text-decoration: none;
 }
 
-nav ul > li:hover  {
-   background-color: #C0C0C0;
+nav ul > li:hover {
+	background-color: #4B3610;
 }
 nav ul > li:hover > a	{
 	color: #002080;
