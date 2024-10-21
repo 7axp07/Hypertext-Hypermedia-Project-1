@@ -35,12 +35,11 @@ footer {
 
 
 .currentNav{
-
+	text-decoration: underline;
 }
 
 .notCurrentNav{
-
-
+	text-decoration: none;
 }
 
 img:hover{
