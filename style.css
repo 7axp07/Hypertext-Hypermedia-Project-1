@@ -23,7 +23,7 @@ header {
 	overflow: hidden;
 	position: absolute;
 	background-color: #705C1E;
-	color: #FFF094;
+	/*color: #FFF094;*/
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -59,12 +59,14 @@ li {
 	padding: 10px;
 }
 
-.currentNav{
+.currentNav {
 	text-decoration: underline;
+	color: #FFF49B;
 }
 
-.notCurrentNav{
+.notCurrentNav {
 	text-decoration: none;
+	color: #FAD452;
 }
 
 img:hover{
