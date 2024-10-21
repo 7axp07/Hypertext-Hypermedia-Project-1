@@ -1,7 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html, body {
-	background-color: #473610;
+	background-color: #382B09;
 	color: #000;
 	margin: 0;
 	padding: 0;
@@ -10,16 +10,17 @@ html, body {
 }
 
 header {
-	height: 70px;
-	background: #B89938;
+	font-family: 'Montserrat', sans-serif;
+	height: 130px;
+	background: #463509;
 	margin: 0;
 }
 
-.navigationBar ul {
+.navbar ul {
 	font-family: 'Sans Serif Collection';
-	width: 120px;
-	height: 100%;
-	overflow: auto;
+	width: 130px;
+	height: 1080px;
+	overflow: hidden;
 	position: absolute;
 	background-color: #705C1E;
 	color: #FFF094;
@@ -27,6 +28,31 @@ header {
 	padding: 0;
 	list-style-type: none;
 	float: none;
+}
+
+.submenu{
+
+
+}
+
+.submenu:hover .submenuItem {
+	display:block;
+}
+
+.submenuItem {
+	width: 100%;
+	position: absolute;
+	display: none;
+	padding: 5px;	
+	float: left;
+}
+
+.submenuItem a {
+	font-size: 12px;
+	padding: 0;
+	font-family: 'Sans Serif Collection';
+	text-decoration: none;
+	color: #FFF094;
 }
 
 li {
@@ -47,9 +73,18 @@ img:hover{
 	}
 
 h1 {
-	color: #210B00;
+	color: #FFF296;
 	text-align: center;
-	padding: 15px;
+	padding: 10px;
+	padding-top:15px;
+	text-shadow: #FC0 1px 0 10px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #FFF296;
+	text-align: center;
+	padding: 0;
 }
 
 a {
@@ -68,7 +103,7 @@ nav ul li a.active {
 #content {
 	width: 100%;
 	height: 100%;
-	background: #FFF296;
+	background: #E0D378;
 	padding: 10%;
 	overflow: hidden;
 }
@@ -90,6 +125,7 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	overflow: hidden;
 }
 
 @media only screen and (max-width: 900px) {
@@ -97,7 +133,7 @@ footer {
 	html, body {
 		height: 100%;
 	}
-	.navigationBar ul {
+	.navbar ul {
 		font-family: 'Sans Serif Collection';
 		width: 100%;
 		height: 70px;
@@ -108,6 +144,7 @@ footer {
 		padding: 0;
 		list-style-type: none;
 		float: none;
+		overflow: auto;
 	}
 
 	li {
@@ -121,6 +158,4 @@ footer {
 		background: #FFF296;
 		overflow: hidden;
 	}
-
-/*	#content {width: 98%;position:relative; top: 30px;margin-top:5%;}*/
 }
