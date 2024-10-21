@@ -16,6 +16,32 @@ header {
 	margin: 0;
 }
 
+.header img {
+	float: left;
+}
+
+.header img:hover {
+	float: left;
+}
+
+.header h1 {
+	color: #FFF296;
+	position: relative;
+	text-align: center;
+	padding: 10px;
+	padding-top: 15px;
+	text-shadow: #FC0 1px 0 10px;
+	margin-bottom: 20px;
+}
+
+.header h2 {
+	color: #FFF296;
+	position: relative;
+	text-align: center;
+	padding: 0;
+}
+
+
 .navbar ul {
 	font-family: 'Sans Serif Collection';
 	width: 130px;
@@ -30,9 +56,8 @@ header {
 	float: none;
 }
 
-.submenu{
-
-
+.submenu {
+	display: block;
 }
 
 .submenu:hover .submenuItem {
@@ -75,18 +100,11 @@ img:hover{
 	}
 
 h1 {
-	color: #FFF296;
-	text-align: center;
-	padding: 10px;
-	padding-top:15px;
-	text-shadow: #FC0 1px 0 10px;
-	margin-bottom: 20px;
+	
 }
 
 h2 {
-	color: #FFF296;
-	text-align: center;
-	padding: 0;
+	
 }
 
 a {
@@ -97,7 +115,7 @@ nav ul > li:hover {
 	background-color: #4B3610;
 }
 nav ul > li:hover > a	{
-	color: #002080;
+	color: #170000;
 }
 nav ul li a.active {
  text-shadow: 1px 1px #101010;
@@ -109,13 +127,7 @@ nav ul li a.active {
 	padding: 10%;
 	overflow: hidden;
 }
-/*#wrapper { 
-	width:90%;
-	overflow:hidden;
-	margin:0 auto;
-	min-height:calc(100% - 52px); 
-	padding:1%; 
-}*/
+
 footer {
 	height: 30px;
 	background: #1F1300;
@@ -134,12 +146,13 @@ footer {
 
 	html, body {
 		height: 100%;
+		
 	}
 	.navbar ul {
 		font-family: 'Sans Serif Collection';
 		width: 100%;
-		height: 70px;
-		position: absolute;
+		height: 50px;
+		position: relative;
 		background-color: #705C1E;
 		color: #FFF094;
 		margin: 0;
@@ -147,17 +160,59 @@ footer {
 		list-style-type: none;
 		float: none;
 		overflow: auto;
+		font-size: 12px;
 	}
+
 
 	li {
 		float: left;
 		padding: 10px;
 	}
 
+	.header img {
+		display: none;
+	}
+
+	.header h1 {
+		color: #FFF296;
+		position: relative;
+		text-align: center;
+		padding: 10px;
+		padding-top: 15px;
+		text-shadow: #FC0 1px 0 10px;
+		margin-bottom: 20px;
+	}
+
+	.header h2 {
+		color: #FFF296;
+		position: relative;
+		text-align: center;
+		padding: 0;
+		font-size: 15px;
+	}
+
+	.submenuItem:focus,
+	.submenuItem:active {
+		display: block;
+	}
+	.submenuItem:focus,
+	.submenuItem:active {
+		display: block;
+	} 
+	
+
+	.submenuItem {
+		width: 100%;
+		position: absolute;
+		display: none;
+		padding: 5px;
+		float: none;
+	}
+
 	#content {
 		width: 100%;
 		height: 100%;
-		background: #FFF296;
+		background: #E0D378;
 		overflow: hidden;
 	}
 }
