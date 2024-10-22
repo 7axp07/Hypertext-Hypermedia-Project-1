@@ -43,7 +43,7 @@ header {
 
 
 .navbar ul {
-	font-family: 'Sans Serif Collection';
+	font-family: 'Montserrat', sans-serif;
 	width: 130px;
 	height: 1080px;
 	overflow: hidden;
@@ -56,13 +56,14 @@ header {
 	float: none;
 }
 
-.submenu {
+/*.submenu {
 	display: block;
 }
 
+
 .submenu:hover .submenuItem {
 	display:block;
-}
+}*/
 
 .submenuItem {
 	width: 100%;
@@ -111,9 +112,6 @@ a {
 	text-decoration: none;
 }
 
-nav ul > li:hover {
-	background-color: #4B3610;
-}
 nav ul > li:hover > a	{
 	color: #170000;
 }
@@ -143,6 +141,10 @@ footer {
 }
 
 
+
+
+
+
 @media only screen and (max-width: 900px) {
 
 	html, body {
@@ -151,10 +153,9 @@ footer {
 	}
 
 	.navbar ul {
-		display: none;/*
-		font-family: 'Sans Serif Collection';
+		font-family: 'Montserrat', sans-serif;
 		width: 100%;
-		height: 50px;
+		height: 100px;
 		position: relative;
 		background-color: #705C1E;
 		color: #FFF094;
@@ -162,19 +163,21 @@ footer {
 		padding: 0;
 		list-style-type: none;
 		float: none;
-		overflow: auto;
-		font-size: 12px;*/
+		overflow: hidden;
+		font-size: 12px;
+		/*display: inline;*/
 	}
 
 
-	li {
+
+	nav li {
 		float: left;
 		padding: 10px;
 	}
 
 	header {
-		height: 11px;
-	}
+		height: 110px;
+		}
 
 	.header img {
 		display: none;
@@ -188,7 +191,7 @@ footer {
 		padding-top: 15px;
 		padding-right: 10px;
 		text-shadow: #FC0 1px 0 10px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.header h2 {
@@ -200,21 +203,22 @@ footer {
 		font-size: 13px;
 	}
 
-	.submenuItem:focus,
-	.submenuItem:active {
-		display: block;
-	}
-	.submenuItem:focus,
-	.submenuItem:active {
-		display: block;
-	}
 
-	.submenuItem {
+	.submenu {
 		width: 100%;
 		position: absolute;
-		display: none;
+		display: inline;
 		padding: 5px;
-		float: none;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	.submenu ul {
+		display: none;
+	}
+
+	.submenu:hover , ul{
+		display: block;
 	}
 
 	#content {
@@ -224,4 +228,6 @@ footer {
 		overflow: hidden;
 		
 	}
+
+	
 }
