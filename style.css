@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 html, body {
 	background-color: #382B09;
@@ -18,10 +19,8 @@ header {
 
 .header img {
 	float: left;
-}
-
-.header img:hover {
-	float: left;
+	padding-left:10px;
+	padding-top:25px;
 }
 
 .header h1 {
@@ -40,7 +39,6 @@ header {
 	text-align: center;
 	padding: 0;
 }
-
 
 .navbar ul {
 	font-family: 'Montserrat', sans-serif;
@@ -62,26 +60,27 @@ header {
 
 
 .submenu:hover .submenuItem {
-	display:block;
+	display: block;
+	color: #382B09;
 }
 
 .submenuItem {
 	width: 100%;
 	position: absolute;
 	display: none;
-	padding: 5px;	
-	float: left;
+	padding: 5px;
+	background-color: #705C1E;
 }
 
 .submenuItem a {
 	font-size: 12px;
 	padding: 0;
-	font-family: 'Sans Serif Collection';
+	font-family:'Montserrat', sans-serif;
 	text-decoration: none;
 	color: #FFF094;
 }
 
-li {
+nav li {
 	padding: 10px;
 }
 
@@ -95,40 +94,44 @@ li {
 	color: #FAD452;
 }
 
-img:hover{
-	opacity: 0.3;
+.header img:hover{
+	opacity: 0.5;
 	
 	}
-
-h1 {
-	
-}
-
-h2 {
-	
-}
-
-.navbar .icon {
-	display: none;
-}
 
 a {
 	text-decoration: none;
 }
 
-nav ul > li:hover > a	{
-	color: #170000;
+nav ul > li:hover > a {
+	color: #382B09;
 }
 nav ul li a.active {
  text-shadow: 1px 1px #101010;
 }
+
+ p, h1 {
+	margin: 5px;
+	padding-right: 20px;
+}
+
+ .info p{
+	 word-wrap: break-word;
+ }
+
 #content {
+	font-family: "Raleway", sans-serif;
 	width: 100%;
 	height: 100%;
 	background: #E0D378;
-	padding: 10%;
+	display: flex;
+	padding-left: 130px ;
+	padding-right: 20px;
+	padding-top: 10px;
 	overflow: hidden;
+	margin-right: 5px;
 }
+
 
 footer {
 	height: 30px;
@@ -224,14 +227,27 @@ footer {
 		
 	}
 
+	.submenuItem {
+		float: right;
+		overflow: hidden;
+		
+	}
+
+	.submenuItem a {
+		font-size: 10px;
+	}
+
 	.submenu ul:hover {
-		display: inline-block;
+		display: block;
 		background-color: #705C1E;
 		float: left;
 		
 	}
 
 	#content {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 50px;
 		width: 100%;
 		height: 100%;
 		background: #E0D378;
