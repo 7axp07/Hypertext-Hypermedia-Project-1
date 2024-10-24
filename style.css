@@ -43,7 +43,7 @@ header {
 .navbar ul {
 	font-family: 'Montserrat', sans-serif;
 	width: 130px;
-	height: 1080px;
+	height: 100%;
 	overflow: hidden;
 	position: absolute;
 	background-color: #705C1E;
@@ -115,13 +115,13 @@ nav ul li a.active {
 	padding-right: 20px;
 }
 
- .info p{
+ .content p{
 	 word-wrap: break-word;
  }
 
-#content {
+.content {
 	font-family: "Raleway", sans-serif;
-	width: 100%;
+	width: 100%-130px;
 	height: 100%;
 	background: #E0D378;
 	display: flex;
@@ -132,14 +132,16 @@ nav ul li a.active {
 	margin-right: 5px;
 }
 
-#content img {
+
+
+.content img {
 	height: auto;
 	width: 70%;
 }
 
 
 
-footer {
+#footer {
 	height: 30px;
 	background: #1F1300;
 	color: #FFF;
@@ -261,7 +263,7 @@ footer {
 		background-color: #705C1E;
 		float: right;
 	}
-	#content {
+	.content {
 		padding-left: 10px;
 		padding-right: 10px;
 		padding-top: 50px;
