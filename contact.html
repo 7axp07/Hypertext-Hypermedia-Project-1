@@ -5,6 +5,7 @@
     <title>MysMes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script defer src="functions.js"></script>
 
 </head>
 <body>
@@ -18,7 +19,7 @@
 
     <div id="navigation">
         <nav class="navbar">
-            <ul>
+            <ul style="z-index: 999">
                 <li><a class="notCurrentNav" href="index.html"><b>Home</b></a></li> <!--home-->
                 <li><a class="notCurrentNav" href="characters.html"><b>Characters</b></a></li>
                 <li><a class="notCurrentNav" href="routes.html"><b>Routes</b></a></li> <!-- routes -->
@@ -43,7 +44,7 @@
         <section>
             <h1>Contact Me!</h1>
             <p>If you have any inquries, questions or complaints regarding either this site or the game, feel free to use the following form and I will get back to you in approximately 3-5 business days!</p>
-            <form>
+            <form action="/action.php">
                 <label class="mainLabel" for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <p></p>
@@ -66,11 +67,26 @@
 
                 <input type="radio" id="other" name="inqT" value="O1">
                 <label for="other">Other</label><br>
+                <!-- -->
+
+                <label class="mainLabel">Favourite character:</label><br />
+                <input list="characters">
+                <datalist id="characters">
+                    <option value="Zen">
+                    <option value="Yoosung">
+                    <option value="Jaehee">
+                    <option value="Jumin">
+                    <option value="707">
+                    <option value="Unknown">
+                    <option value="V">
+                    <option value="Rika">
+                </datalist>
+
 
                 <br />
-                <a href="formSubmit.html">
-                    <input type="submit" value="Submit" />
-                </a>
+                <button type="submit">
+                    <a href="formSubmit.html">Submit</a>
+                </button>
                 <input type="reset" />
 
             </form>
@@ -79,7 +95,7 @@
    
 
 
-    <div id="footer">
+    <div id="footer" style="z-index: 1000">
         <footer> Copyright 2024, Aleksandra Przygoda, WETI </footer>
     </div>
 </body>

@@ -5,6 +5,7 @@
     <title>MysMes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script defer src="functions.js"></script>
 
 </head>
 <body>
@@ -18,7 +19,7 @@
 
     <div id="navigation">
         <nav class="navbar">
-            <ul>
+            <ul style="z-index: 999">
                 <li><a class="notCurrentNav" href="index.html"><b>Home</b></a></li> <!--home-->
                 <li><a class="currentNav" href="characters.html"><b>Characters</b></a></li>
                 <li><a class="notCurrentNav" href="routes.html"><b>Routes</b></a></li> <!-- routes -->
@@ -38,6 +39,10 @@
         </nav>
     </div>
 
+    <div id="wrapper">
+        <div class="scroller">This page may contain Spoilers !</div>
+    </div>
+
     <div id="content">
         <main id="content">
             <div>
@@ -46,7 +51,7 @@
         </main>
     </div>
 
-    <div id="footer">
+    <div id="footer" style="z-index: 1000">
         <footer> Copyright 2024, Aleksandra Przygoda, WETI </footer>
     </div>
 </body>
