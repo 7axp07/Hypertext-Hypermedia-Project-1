@@ -115,26 +115,35 @@ nav ul li a.active {
 	padding-right: 20px;
 }
 
- .content p{
+ #content p{
 	 word-wrap: break-word;
  }
 
-.content {
+#content {
 	font-family: "Raleway", sans-serif;
 	width: 100%-130px;
 	height: 100%;
 	background: #E0D378;
 	display: flex;
-	padding-left: 130px ;
+	padding-left: 140px ;
 	padding-right: 20px;
 	padding-top: 10px;
 	overflow: hidden;
 	margin-right: 5px;
 }
 
+form {
+	margin: 5px;
+	
+}
+
+.mainLabel {
+	line-height: 1.5;
+}
 
 
-.content img {
+
+#content img {
 	height: auto;
 	width: 70%;
 }
@@ -154,6 +163,8 @@ nav ul li a.active {
 	width: 100%;
 	overflow: hidden;
 }
+
+
 
 
 
@@ -253,7 +264,7 @@ nav ul li a.active {
 	.submenu ul:hover {
 		display: block;
 		background-color: #705C1E;
-		float: right;
+		float: left;
 		
 	}
 
@@ -263,7 +274,7 @@ nav ul li a.active {
 		background-color: #705C1E;
 		float: right;
 	}
-	.content {
+	#content {
 		padding-left: 10px;
 		padding-right: 10px;
 		padding-top: 50px;
