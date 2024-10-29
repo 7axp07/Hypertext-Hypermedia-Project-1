@@ -135,11 +135,15 @@ nav ul li a.active {
 
 form {
 	margin: 5px;
-	
 }
 
 .mainLabel {
 	line-height: 1.5;
+}
+
+form select {
+	width: 100px;
+	color: black;
 }
 
 
