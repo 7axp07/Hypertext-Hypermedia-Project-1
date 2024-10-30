@@ -122,7 +122,7 @@ nav ul li a.active {
 
 #content {
 	font-family: "Raleway", sans-serif;
-	width: 100%;
+	width: 100%-130px;
 	height: 100%;
 	background: #E0D378;
 	display: flex;
@@ -155,7 +155,7 @@ form select {
 
 
 
-#footer {
+footer {
 	height: 30px;
 	background: #1F1300;
 	color: #FFF;
