@@ -39,34 +39,38 @@
         </nav>
     </div>
 
-    <div id="wrapper">
+<div id="wrapper">
         <div class="scroller">This page may contain Spoilers !</div>
     </div>
 
 
 
     <main id="content">
-        <div>
-            <p>Info about routes shall be here with clickable images that go to the characters yes using #*charactername*</p>
-        </div>
-        <div id="tabs">
+        
+        <!--Info about routes shall be here with clickable images that go to the characters yes using #*charactername*-->
+        <div id="tabs" style="width: fit-content">
             <ul>
-                <li><a href="#fragment-1"><span>Casual Story</span></a></li>
-                <li><a href="#fragment-2"><span>Deep Story</span></a></li>
-                <li><a href="#fragment-3"><span>Another Story</span></a></li>
+                <li><a href="#casual"><span><img src="imgs\casualstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Casual Story" /></span></a></li>
+                <li><a href="#deep"><span><img src="imgs\deepstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Deep Story" /></span></a></li> <!-- responsive text instead of img--> <!--<a href="#deep" class="tabText">Deep Story</a>-->
+                <li><a href="#another"><span><img src="imgs\anotherstory_ss.webp" style="height: auto; width: 175px" class="tabImg" alt="Another Story" /></span></a></li>
             </ul>
-            <div id="fragment-1">
-                <p>First tab is active by default:</p>
-                <pre><code>$( "#tabs" ).tabs(); </code></pre>
+            <div id="casual">
+                <p></p> <!-- Characters/available routes, Cost, short synopsis, link to the characters -->
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                <img src="imgs\casualstory_ss.webp" style="height: auto; width: 150px" />
             </div>
-            <div id="fragment-2">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            <div id="deep">
+                <p>bb</p>
+                <img src="imgs\deepstory_ss.webp" style="height: auto; width: 150px" />
+
             </div>
-            <div id="fragment-3">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            <div id="another">
+                <p>
+                    Another Story is a mode in Mystic Messenger, which was released on September 8, 2017. It is one of the three modes available in Mystic Messenger, the others being Casual Story and Deep Story. <br />
+                    It costs 550 HG to fully unlock the mode; costing 300 to unlock V's route and 250 to unlock Ray's route.<br />
+                    Unlike in Casual and Deep Story modes, outgoing phone calls cost 10 hourglasses and missed chat rooms cost 15 hourglasses to play in Another Story. The story also takes place 6 months after Rika's "suicide" rather than a year and a half later. <br />
+                    The only romanceable characters are V and Ray/Saeran. Originally, it was only V who was romanceable, however, Ray's route was released on January 31, 2018.<br />
+                </p>
             </div>
         </div>
 
@@ -75,7 +79,7 @@
 
     <footer style="z-index: 1000"> Copyright 2024, Aleksandra Przygoda, WETI </footer>
 
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/swanky-purse/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
 

@@ -155,6 +155,14 @@ form select {
 
 
 
+.ui-tabs .ui-tabs-nav li a {
+    display: inline-block;
+    float: none;
+    padding: 5px;
+    text-decoration: none;
+    width: 100%;
+}
+
 footer {
 	height: 30px;
 	background: #1F1300;
@@ -184,7 +192,9 @@ footer {
 	position: absolute;
 }
 
-
+.tabText {
+	display: none;
+}
 
 
 
@@ -301,6 +311,10 @@ footer {
 		background: #E0D378;
 		overflow: hidden;
 		
+	}
+
+	.tabImg {
+		display: none;
 	}
 
 	
