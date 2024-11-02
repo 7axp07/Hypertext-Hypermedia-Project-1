@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
+body {
 	background-color: #382B09;
 	color: #000;
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	
+	box-sizing: border-box;
 }
 
 
@@ -41,12 +41,13 @@ header {
 	padding: 0;
 }
 
+
 .navbar ul {
 	font-family: 'Montserrat', sans-serif;
 	width: 130px;
-	height: 110%;
+	height: 100%;
 	overflow: hidden;
-	position: absolute;
+	position:absolute;
 	background-color: #705C1E;
 	/*color: #FFF094;*/
 	margin: 0;
@@ -69,13 +70,13 @@ header {
 	width: 100%;
 	position: absolute;
 	display: none;
-	padding: 5px;
+	padding: 0px;
 	background-color: #705C1E;
+	line-height:30px;
 }
 
 .submenuItem a {
 	font-size: 12px;
-	padding: 0;
 	font-family:'Montserrat', sans-serif;
 	text-decoration: none;
 	color: #FFF094;
@@ -97,7 +98,6 @@ nav li {
 
 .header img:hover{
 	opacity: 0.5;
-	
 	}
 
 a {
@@ -116,13 +116,9 @@ nav ul li a.active {
 	padding-right: 20px;
 }
 
- #content p{
-	 word-wrap: break-word;
- }
 
 #content {
 	font-family: "Raleway", sans-serif;
-	height: 100%;
 	background: #E0D378;
 	display: flex;
 	padding-left: 140px ;
@@ -131,6 +127,10 @@ nav ul li a.active {
 	overflow: hidden;
 	margin-right: 5px;
 }
+
+#content p{
+	 word-wrap: break-word;
+ }
 
 form {
 	margin: 5px;
@@ -209,8 +209,12 @@ footer {
 }
 
 #content table tr th .fullbody {
-	width: 100px;
+	width: 150px;
 	padding: 0;
+}
+
+table {
+margin-left: 25%;
 }
 
 table, th, td {
@@ -245,7 +249,9 @@ table, th, td {
 
 	}
 
-
+	table {
+		margin: 0;
+	}
 
 	nav li {
 		float: left;
@@ -328,7 +334,6 @@ table, th, td {
 		padding-right: 10px;
 		padding-top: 50px;
 		width: 100%;
-		height: 100%;
 		background: #E0D378;
 		overflow: hidden;
 		
@@ -337,6 +342,8 @@ table, th, td {
 	.tabImg {
 		display: none;
 	}
+
+
 
 	
 }
