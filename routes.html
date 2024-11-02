@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>MysMes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="imgs\MysMesIcon.png">
+    <link rel="icon" type="image/x-icon" href="imgs/MysMesIcon.png">
     <link rel="stylesheet" href="style.css" />
 
 </head>
 <body>
     <header>
         <div class="header">
-            <a href="index.html"><img src="imgs\MysMesLogo.webp" alt="Mystic Messenger Logo, ©Cheritz Corporation"></a>
+            <a href="index.html"><img src="imgs/MysMesLogo.webp" alt="Mystic Messenger Logo, ©Cheritz Corporation"></a>
             <h1>Mystic Messenger</h1>
             <h2><em>The Interactive Storytelling Messenger Game</em></h2>
         </div>
@@ -39,45 +39,64 @@
         </nav>
     </div>
 
-<div id="wrapper">
-        <div class="scroller">This page may contain Spoilers !</div>
+    <div id="wrapper">
+        <div class="scroller">THIS PAGE MAY CONTAIN <em>SPOILERS</em>!</div>
     </div>
 
 
 
     <main id="content">
-        
+
         <!--Info about routes shall be here with clickable images that go to the characters yes using #*charactername*-->
         <div id="tabs" style="width: fit-content">
             <ul>
-                <li><a href="#casual"><span><img src="imgs\casualstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Casual Story" /></span></a></li>
-                <li><a href="#deep"><span><img src="imgs\deepstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Deep Story" /></span></a></li> <!-- responsive text instead of img--> <!--<a href="#deep" class="tabText">Deep Story</a>-->
-                <li><a href="#another"><span><img src="imgs\anotherstory_ss.webp" style="height: auto; width: 175px" class="tabImg" alt="Another Story" /></span></a></li>
+                <li><a href="#casual"><span><img src="imgs/casualstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Casual Story" /></span></a></li>
+                <li><a href="#deep"><span><img src="imgs/deepstory_ss.webp" style="height: auto; width: 200px" class="tabImg" alt="Deep Story" /></span></a></li> <!-- responsive text instead of img--> <!--<a href="#deep" class="tabText">Deep Story</a>-->
+                <li><a href="#another"><span><img src="imgs/anotherstory_ss.webp" style="height: auto; width: 175px" class="tabImg" alt="Another Story" /></span></a></li>
             </ul>
-            <div id="casual">
-                <p></p> <!-- Characters/available routes, Cost, short synopsis, link to the characters -->
-                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-                <img src="imgs\casualstory_ss.webp" style="height: auto; width: 150px" />
-            </div>
-            <div id="deep">
-                <p>bb</p>
-                <img src="imgs\deepstory_ss.webp" style="height: auto; width: 150px" />
-
-            </div>
-            <div id="another">
-                <div>
+            <div id="tab">
+                <div id="casual">
+                    <p></p> <!-- Characters/available routes, Cost, short synopsis, link to the characters -->
                     <p>
-                        Another Story is a mode in Mystic Messenger, which was released on September 8, 2017. It features the routes of two characters: V and Ray/Saeran. <br />
-                        It costs 550 HG to fully unlock the mode; costing 300 to unlock V's route and 250 to unlock Ray's route.<br />
-                        Unlike in Casual and Deep Story modes, outgoing phone calls cost 10 hourglasses and missed chat rooms cost 15 hourglasses to play in Another Story. The story also takes place 6 months after Rika's "suicide" rather than a year and a half later. <br />
-                        Originally, it was only V who was romanceable, however, Ray's route was released on January 31, 2018.<br />
+                        Casual Story is the first of three modes available in Mystic Messenger. It is unlocked upon downloading the game and serves as the introductory story for most players.
+                        Through Casual Story, the player will be able to obtain the routes of Yoosung, Zen, and Jaehee Kang depending on their responses in the chatrooms during the first four days of the game.<br />
+                        <br />
+                        <strong>Bad Ending</strong><br />
+                        It is possible to obtain a non-route specific Bad Ending on the 5th day of Casual Story if the player misses too many chats, or obtained only Jumin Han / 707's hearts,
+                        or did not obtain enough hearts of either one of the three to get a route by Day 5. It is an eerie ending which breaks the "4th wall", where the characters joke that all of them are robots.
                     </p>
+                    <a href="characters.html" title="Click here to find out more about Yoosung"><img src="imgs/routes/yoosungroute.png" /></a>
+                    <a href="characters.html" title="Click here to find out more about Zen"><img src="imgs/routes/zenroute.png" /></a>
+                    <a href="characters.html" title="Click here to find out more about Jaehee"><img src="imgs/routes/jaeheeroute.png" /></a>
                 </div>
-                <div>
+                <div id="deep">
+                    <p>
+                        Deep Story is the <em>second</em> out of the three modes available in Mystic Messenger. Compared to Casual Story, Deep Story focuses more heavily on plot details.
+                        Since it requires <strong> 200</strong>  hourglasses to unlock Deep Story mode, it is <em> highly</em>  recommended for players to unlock all three routes available in Casual Story first before proceeding to Deep Story.
+                        Through Deep Story, the player will be able to obtain the routes of 707 and Jumin Han depending on their responses in the chatrooms during the first four days of the game. <br />
+                        <br />
+                        <strong>Bad Ending</strong><br />
+                        It is possible to obtain a non-route specific Bad Ending on the 5th day of Deep Story if the player misses too many chats, or obtained only Yoosung / Zen / Jaehee Kang's hearts
+                        or did not obtain enough hearts of either one of the two to get a route by Day 5. In this ending, the player is forcibly taken away from Rika's apartament as Seven realizes they
+                        [the player] might be in danger if they stay.
 
+                    </p>
+                    <a href="characters.html" title="Click here to find out more about Jumin"><img src="imgs/routes/juminroute.png" /></a>
+                    <a href="characters.html" title="Click here to find out more about Seven"><img src="imgs/routes/sevenroute.png" /></a>
 
                 </div>
-                
+                <div id="another">
+                    <div>
+                        <p>
+                            Another Story was released on <em>September 8, 2017</em>. It features the routes of two characters: V and Ray/Saeran. <br />
+                            It costs <strong>550 HG</strong> to fully unlock the mode; costing <strong>300</strong> to unlock V's route and <strong>250</strong> to unlock Ray's route.<br />
+                            Unlike in Casual and Deep Story modes, outgoing phone calls cost 10 hourglasses and missed chat rooms cost 15 hourglasses to play in Another Story. The story also takes place 6 months after Rika's "suicide" rather than a year and a half later. <br />
+                            Originally, it was only V who was romanceable, however, Ray's route was released on <em>January 31, 2018.</em> <br />
+                        </p>
+                        <a href="characters.html" title="Click here to find out more about V"><img src="imgs/routes/vroute.png" /></a>
+                        <a href="characters.html" title="Click here to find out more about Ray"><img src="imgs/routes/rayroute.png" /></a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -87,13 +106,21 @@
     <footer style="z-index: 1000"> Copyright 2024, Aleksandra Przygoda, WETI </footer>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/swanky-purse/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery/jquery-3.7.1.min.js"></script>  <!--https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js-->
     <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
 
     <script defer src="functions.js"></script>
     <script>
         $("#tabs").tabs();
     </script>
+
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+
+
 
 </body>
 

@@ -40,26 +40,42 @@
     </div>
 
     <div id="wrapper">
-        <div class="scroller">This page may contain Spoilers !</div>
+        <div class="scroller">THIS PAGE MAY CONTAIN <em>SPOILERS</em>!</div>
     </div>
 
     <main id="content">
         <div>
             <p>A table of characters will be here :) with hoverable etc images jquery yesy yesyyes</p>
         </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Info:</th>
+            </tr>
+
+            <tr>
+                <th><img class="fullbody" src="imgs/characters/Yoosung_full.png"></th>
+                <th></th>
+            </tr>
+
+        </table>
     </main>
 
 
+    <a href="characters.html" target="_top" style="float: right"> Go to the top of the page</a>
+
 
     <footer style="z-index: 1000"> Copyright 2024, Aleksandra Przygoda, WETI </footer>
-
-
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/swanky-purse/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
-
     <script defer src="functions.js"></script>
-   
+
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="jquery/hover/extm.min.js"></script>
+    <script>
+        $('.fullbody').extm({
+            position: 'overlay'
+        });
+    </script>
+
 
 </body>
 </html>

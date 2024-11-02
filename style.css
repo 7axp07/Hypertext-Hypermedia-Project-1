@@ -122,7 +122,6 @@ nav ul li a.active {
 
 #content {
 	font-family: "Raleway", sans-serif;
-	width: 100%-130px;
 	height: 100%;
 	background: #E0D378;
 	display: flex;
@@ -194,6 +193,27 @@ footer {
 
 .tabText {
 	display: none;
+}
+
+#tab a img {
+	height: auto;
+	width: 300px;
+	display: inline-block;
+	padding-left: 5px;
+	padding-top: 10px;
+
+}
+
+#tab {
+	line-height: 25px;
+}
+
+#content table tr th .fullbody {
+	width: 200px;
+}
+
+table, th, td {
+	border: 1px solid;
 }
 
 
