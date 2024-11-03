@@ -134,6 +134,10 @@ nav ul li a.active {
 	stroke: #E0D378;
 }
 
+#videoFrame {
+	display: none;
+}
+
 #content {
 	font-family: "Raleway", sans-serif;
 	color: #201904;
