@@ -1,19 +1,16 @@
-let dm = false;
+const toggleButton = document.getElementById('darkModeSwitch');
+const back = document.getElementById("content");
 
-function darkMode() {
-    let back = document.getElementById("content");
-  
-    if (Boolean(dm) == false) {
-        back.style.background = '#201904';
-        back.style.color = '#E0D378';
-        dm = true;
-    }
-    else if (Boolean(dm) == true) {
-        back.style.background = '#E0D378';
-        back.style.color = '#201904';
-        dm = false;
-    }
-    
+// Check for saved 'darkMode' in localStorage
+const darkMode = localStorage.getItem('darkMode');
 
+if (darkMode) {
+    back.classList.add('dark');
 }
 
+toggleButton.onclick = function () {
+    back.classList.toggle('dark');
+
+    // Save the current preference to localStorage
+    localStorage.setItem('darkMode', back.classList.contains('dark'));
+}

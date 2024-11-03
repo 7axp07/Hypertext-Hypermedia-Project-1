@@ -134,7 +134,10 @@ nav ul li a.active {
 	margin-right: 5px;
 }
 
-
+#content.dark {
+	color: #E0D378;
+	background: #201904;
+}
 
 #content p{
 	 word-wrap: break-word;
