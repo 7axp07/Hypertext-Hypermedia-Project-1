@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+html, body {
 	background-color: #382B09;
 	color: #000;
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	box-sizing: border-box;
-}
+
+	}
 
 
 header {
@@ -22,6 +22,10 @@ header {
 	float: left;
 	padding-left:10px;
 	padding-top:25px;
+}
+
+#miniIcon {
+	display: none;
 }
 
 .header h1 {
@@ -41,13 +45,12 @@ header {
 	padding: 0;
 }
 
-
 .navbar ul {
 	font-family: 'Montserrat', sans-serif;
 	width: 130px;
 	height: 100%;
 	overflow: hidden;
-	position:absolute;
+	position: absolute;
 	background-color: #705C1E;
 	/*color: #FFF094;*/
 	margin: 0;
@@ -117,20 +120,30 @@ nav ul li a.active {
 }
 
 
+
 #content {
 	font-family: "Raleway", sans-serif;
+	color: #201904;
 	background: #E0D378;
 	display: flex;
-	padding-left: 140px ;
+	padding-left: 140px;
 	padding-right: 20px;
 	padding-top: 10px;
+	bottom: 0;
 	overflow: hidden;
 	margin-right: 5px;
 }
 
+
+
 #content p{
 	 word-wrap: break-word;
  }
+
+#posterMM {
+	display: none;
+	
+}
 
 form {
 	margin: 5px;
@@ -146,14 +159,6 @@ form select {
 }
 
 
-
-#content img {
-	height: auto;
-	width: 70%;
-}
-
-
-
 .ui-tabs .ui-tabs-nav li a {
     display: inline-block;
     float: none;
@@ -163,7 +168,7 @@ form select {
 }
 
 footer {
-	height: 30px;
+	height: 25px;
 	background: #1F1300;
 	color: #FFF;
 	text-align: center;
@@ -266,6 +271,10 @@ table, th, td {
 		display: none;
 	}
 
+	#miniIcon {
+		display: initial;
+	}
+
 	.header h1 {
 		color: #FFF296;
 		position: relative;
@@ -336,10 +345,22 @@ table, th, td {
 		width: 100%;
 		background: #E0D378;
 		overflow: hidden;
+		display: block;
 		
 	}
 
+	#posterMM {
+		display: inherit;
+		margin-left: 20%;
+		width: 50%;
+		height: auto;
+	}
+
 	.tabImg {
+		display: none;
+	}
+
+	iframe {
 		display: none;
 	}
 
