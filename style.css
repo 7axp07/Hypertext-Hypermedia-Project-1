@@ -119,7 +119,20 @@ nav ul li a.active {
 	padding-right: 20px;
 }
 
+#galleryIcon path {
+	stroke: #201904;
+}
 
+#galleryIco circle {
+	stroke: #201904;
+}
+
+#galleryIcon.dark path {
+	stroke: #E0D378;
+}
+#galleryIcon.dark circle {
+	stroke: #E0D378;
+}
 
 #content {
 	font-family: "Raleway", sans-serif;
