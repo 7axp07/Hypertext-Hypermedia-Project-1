@@ -134,9 +134,6 @@ nav ul li a.active {
 	stroke: #E0D378;
 }
 
-#videoFrame {
-	display: none;
-}
 
 #content {
 	font-family: "Raleway", sans-serif;
@@ -163,6 +160,13 @@ nav ul li a.active {
 #posterMM {
 	display: none;
 	
+}
+
+#videoFrame {
+	padding-left: 10%;
+	padding-top: 10px;
+	width: 560px;
+	height: 315px;
 }
 
 form {
@@ -380,7 +384,7 @@ table, th, td {
 		display: none;
 	}
 
-	iframe {
+	#videoFrame {
 		display: none;
 	}
 
