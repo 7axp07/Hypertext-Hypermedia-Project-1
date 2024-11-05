@@ -1,7 +1,14 @@
-const toggleButton = document.getElementById('darkModeSwitch');
-const back = document.getElementById("content");
-const icon = document.getElementById("galleryIcon");
+const toggleButton = document.createElement("b");
+toggleButton.setAttribute("id", "darkModeSwitch");
+const toggleImg = document.createElement("img");
+toggleImg.setAttribute("src", "darkmode.svg");
+toggleButton.appendChild(toggleImg);
+const darkDiv = document.getElementById("darkModeDiv");
+darkDiv.appendChild(toggleButton);
 
+
+const icon = document.getElementById("galleryIcon");
+const back = document.getElementById("content");
 let darkMode = localStorage.getItem("darkMode");
 
 const enableDarkMode = () => {

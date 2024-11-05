@@ -123,7 +123,7 @@ nav ul li a.active {
 	stroke: #201904;
 }
 
-#galleryIco circle {
+#galleryIcon circle {
 	stroke: #201904;
 }
 
@@ -132,6 +132,11 @@ nav ul li a.active {
 }
 #galleryIcon.dark circle {
 	stroke: #E0D378;
+}
+
+.tabImg {
+	height: auto;
+
 }
 
 
@@ -167,6 +172,12 @@ nav ul li a.active {
 	padding-top: 10px;
 	width: 560px;
 	height: 315px;
+}
+
+#darkModeSwitch {
+	float: right;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
 
 form {
