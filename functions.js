@@ -18,15 +18,6 @@ function move() {
     requestAnimationFrame(move);
 }
 
-const pCS = document.getElementById("casualH");
-const divCS = document.getElementById("casual");
-const pDS = document.getElementById("deepH");
-const divDS = document.getElementById("deep");
-const pAS = document.getElementById("anotherH");
-const divAS = document.getElementById("another");
-divCS.removeChild(pCS);
-divDS.removeChild(pDS);
-divAS.removeChild(pAS);
 
 const casTab = document.getElementById("casualTab");
 const dsTab = document.getElementById("deepTab");
@@ -46,15 +37,28 @@ const asImg = document.createElement("img");
 asImg.setAttribute("src", "imgs/anotherstory_ss.webp");
 asImg.setAttribute("width", "175px");
 asImg.setAttribute("class", "tabImg");
-
 casTab.appendChild(csImg);
 dsTab.appendChild(dsImg);
 anoTab.appendChild(asImg);
 
-const textCS = document.getElementById("csTabText");
-const textDS = document.getElementById("dsTabText");
-const textAS = document.getElementById("asTabText");
-const divText = document.getElementById("tabs");
-divText.removeChild(textCS);
-divText.removeChild(textDS);
-divText.removeChild(textAS);
+
+const pCS = document.getElementById("csTabHead");
+const divCS = document.getElementById("casual");
+const pDS = document.getElementById("dsTabHead");
+const divDS = document.getElementById("deep");
+const pAS = document.getElementById("asTabHead");
+const divAS = document.getElementById("another");
+divCS.removeChild(pCS);
+divDS.removeChild(pDS);
+divAS.removeChild(pAS);
+
+const tabHeadA = document.getElementById("tabHeaderA");
+const tabHeadB = document.getElementById("tabHeaderB");
+const tabHeadC = document.getElementById("tabHeaderC");
+
+const csTT = document.getElementById("csTabText");
+tabHeadA.removeChild(csTT);
+const dsTT = document.getElementById("dsTabText");
+tabHeadB.removeChild(dsTT);
+const asTT = document.getElementById("asTabText");
+tabHeadC.removeChild(asTT);
