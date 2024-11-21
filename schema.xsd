@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="mystic-messenger">
+		
+		
+	</xs:element>
+
+	<xs:complexType name="imgType">
+		<xs:attribute name="width" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="height" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute ref="src" use="required"/>
+		<xs:attribute name="alt">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:attribute name="src">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+
+</xs:schema>
+
