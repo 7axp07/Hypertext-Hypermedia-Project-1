@@ -59,6 +59,10 @@ header {
 	float: none;
 }
 
+#charUL {
+	height: 3390px;
+}
+
 .submenu {
 	display: block;
 }
@@ -110,13 +114,18 @@ a {
 nav ul > li:hover > a {
 	color: #382B09;
 }
-nav ul li a.active {
+nav ul li a:active {
  text-shadow: 1px 1px #101010;
 }
 
  p, h1 {
 	margin: 5px;
 	padding-right: 20px;
+}
+
+p::selection {
+	color: #382B09;
+	background-color: yellow;
 }
 
 #galleryIcon path {
@@ -271,7 +280,7 @@ table, th, td {
 	.navbar ul {
 		font-family: 'Montserrat', sans-serif;
 		width: 100%;
-		height: 50px;
+		height: 70px;
 		position: absolute;
 		background-color: #705C1E;
 		color: #FFF094;
@@ -279,7 +288,7 @@ table, th, td {
 		padding: 0;
 		list-style-type: none;
 		float: left;
-		overflow: hidden;
+		left: 0;
 		font-size: 12px;
 		overflow: clip;
 		/*display: inline;*/
@@ -331,17 +340,17 @@ table, th, td {
 	.submenu {
 		background-color: #705C1E;
 		width: 100%;
-		position: absolute;
-		display: inline-block ;
+	
+		display: inline-block;
 		padding: 0;
-		float: none;
+		float: left;
 		padding-top: 10px;
-		
 	}
 	
 	.submenu ul {
-		display: none;
-		
+		display: inline-block;
+		float: left;
+		left: 0px;
 	}
 
 	.submenuItem {
@@ -354,26 +363,21 @@ table, th, td {
 
 	.submenuItem a {
 		font-size: 10px;
+		float: left;
 
 	}
 
 	.submenu ul:hover {
-		display: block;
+		display: inline-block;
 		background-color: #705C1E;
 		float: left;
 		
 	}
 
-
-	.submenu:hover {
-		display: inline-block;
-		background-color: #705C1E;
-		float: right;
-	}
 	#content {
 		padding-left: 10px;
 		padding-right: 10px;
-		padding-top: 50px;
+		padding-top: 70px;
 		width: 100%;
 		background: #E0D378;
 		overflow: hidden;
@@ -396,6 +400,9 @@ table, th, td {
 		display: none;
 	}
 
+	#charUL {
+		height: 70px;
+	}
 
 
 	
