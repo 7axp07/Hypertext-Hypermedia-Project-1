@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="mystic-messenger">
+	<xs:element name="mysticmessenger">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element name="stories">
+					<xs:complexType>
+						<xs:sequence maxOccurs="3">
+							<xs:element name="story" type="storyType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="characters">
 					<xs:complexType>
 						<xs:sequence maxOccurs="unbounded">
@@ -13,11 +20,10 @@
 				<xs:element name="developer">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="company" type="companyType" maxOccurs="1"/>
+							<xs:element name="company" type="companyType"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -26,23 +32,160 @@
 
 
 	<xs:complexType name="characterType">
-		<xs:sequence>
-			<xs:sequence minOccurs="1" maxOccurs="2">
-				<xs:element name="name" type="xs:string"/>
-			</xs:sequence>
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="names">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" maxOccurs="2">
+							<xs:complexType mixed="true">
+								<xs:attribute ref="lang"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="username" type="xs:string"/>
 			<xs:element name="age" type="ageType" maxOccurs="1"/>
-				
+			<xs:element name="birthday" type="xs:string" maxOccurs="1"/>
+			<xs:element name="appearance">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="hair" >
+                            <xs:complexType mixed="true">
+                                <xs:attribute name="length" type="xs:string"/>
+								<xs:attribute name="isDyed">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="yes"/>
+											<xs:enumeration value="no"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:complexType>
+                        </xs:element>
+                        <xs:element name="eyes" >
+                            <xs:complexType mixed="true">
+								<xs:attribute name="hasGlasses">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="yes"/>
+											<xs:enumeration value="no"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:complexType>
+                        </xs:element>
+                        <xs:element name="height">
+                            <xs:complexType mixed="true">
+                                <xs:attribute name="unit" type="xs:string"/>
+							</xs:complexType>
+                        </xs:element>
+						<xs:element name="weight">
+                            <xs:complexType mixed="true">
+                                <xs:attribute name="unit" type="xs:string"/>
+							</xs:complexType>
+                        </xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="occupation" type="xs:string"/>
+			<xs:element name="personality">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="text" type="xs:string"/>
+						<xs:element name="likes">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element maxOccurs="unbounded" name="like">
+										<xs:complexType mixed="true">
+											<xs:attribute name="type">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="interest"/>
+														<xs:enumeration value="hobby"/>
+														<xs:enumeration value="character"/>
+														<xs:enumeration value="refreshment"/>
+														<xs:enumeration value="other"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
 			
+			</xs:element>
+			<xs:element name ="img" type="imgType"/>
+		</xs:sequence>
+		<xs:attribute name="gender">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[mf]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType> 
+	
+	<xs:complexType name="storyType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="price">
+				<xs:complexType mixed="true">
+					<xs:attribute ref="currency"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="numOfRoutes" type="xs:int"/>
+			<xs:element name="routes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="route" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 
 	<xs:complexType name="companyType">
 		<xs:sequence>
 			<xs:element name="companyName" type="xs:string"/>
 			<xs:element name="foundationDate" type="xs:unsignedInt" maxOccurs="1"/>
-			<xs:element name="location" type="locationType" />
+			<xs:element name="location" type="locationType" maxOccurs="1" />
+			<xs:element name="games">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="game" type="gameType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="contact">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="socialMedia">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="link" maxOccurs="unbounded">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="linkType"/>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="emails">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="email" maxOccurs="unbounded" type="emailType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -67,6 +210,22 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="gameType">
+		<xs:sequence>
+			<xs:element name="gameName" type="xs:string" />
+			<xs:element name="releaseDate" type="xs:unsignedInt"/>
+			<xs:element name="genre" type="genreTypeRestricted" />
+		</xs:sequence>
+	</xs:complexType>
+	
+
+	<xs:complexType name="emailType">
+		<xs:sequence>
+			<xs:element name="purpose" type="xs:string" />
+			<xs:element name="emailAddress" type="emailAddress" />
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:attribute name="lang" default="EN">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -78,12 +237,12 @@
 	</xs:attribute>
 
 	<xs:complexType name="imgType">
-		<xs:attribute name="width" use="required">
+		<xs:attribute name="width">
 			<xs:simpleType>
 				<xs:restriction base="xs:int"/>
 			</xs:simpleType>
 		</xs:attribute>
-		<xs:attribute name="height" use="required">
+		<xs:attribute name="height">
 			<xs:simpleType>
 				<xs:restriction base="xs:int"/>
 			</xs:simpleType>
@@ -98,18 +257,26 @@
 		</xs:attribute>
 	</xs:complexType>
 
+
 	<xs:attribute name="src">
 		<xs:simpleType>
-			<xs:restriction base="xs:string">
+			<xs:restriction base="xs:anyURI">
 				<xs:minLength value="1"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:attribute>
 
+
+	<xs:complexType name="linkType">
+		<xs:attribute ref="src"/>
+	</xs:complexType>
+
 	<xs:attribute name="currency">
 		<xs:simpleType>
-			<xs:restriction base="xs:integer">
-				<xs:maxInclusive value="600"/>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="HG"/>
+				<xs:enumeration value="USD"/>
+				<xs:maxLength value="3"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:attribute>
@@ -124,6 +291,16 @@
 	</xs:attribute>
 	
 	<xs:attribute name="population" type="xs:unsignedInt" />
+	
+	<xs:simpleType name="genreType">
+        <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+	
+	 <xs:simpleType name="genreTypeRestricted">
+        <xs:restriction base="genreType">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 	<xs:simpleType name="ageType">
 		<xs:restriction base="xs:integer">
@@ -132,6 +309,11 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:simpleType name="emailAddress">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+		</xs:restriction>
+	</xs:simpleType>
 	
 
 </xs:schema>
