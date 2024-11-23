@@ -1,8 +1,81 @@
-﻿<?xml version="1.0"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="mystic-messenger">
-		
-		
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="characters">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="character" type="characterType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="developer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="company" type="companyType" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
+
+
+
+
+	<xs:complexType name="characterType">
+		<xs:sequence>
+			<xs:sequence minOccurs="1" maxOccurs="2">
+				<xs:element name="name" type="xs:string"/>
+			</xs:sequence>
+			<xs:element name="username" type="xs:string"/>
+			<xs:element name="age" type="ageType" maxOccurs="1"/>
+				
+			
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="companyType">
+		<xs:sequence>
+			<xs:element name="companyName" type="xs:string"/>
+			<xs:element name="foundationDate" type="xs:unsignedInt" maxOccurs="1"/>
+			<xs:element name="location" type="locationType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="locationType">
+		<xs:sequence>
+			<xs:element name="country">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="city">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute ref="population"></xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute ref="population"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:attribute name="lang" default="EN">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="2"/>
+				<xs:enumeration value="EN"/>
+				<xs:enumeration value="KR"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
 
 	<xs:complexType name="imgType">
 		<xs:attribute name="width" use="required">
@@ -33,6 +106,33 @@
 		</xs:simpleType>
 	</xs:attribute>
 
+	<xs:attribute name="currency">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxInclusive value="600"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	
+	<xs:attribute name="standard" default="korean">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="english"/>
+				<xs:enumeration value="korean"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	
+	<xs:attribute name="population" type="xs:unsignedInt" />
+
+	<xs:simpleType name="ageType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
 
 </xs:schema>
 
