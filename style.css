@@ -284,6 +284,10 @@ table, th, td {
 	}
 }
 
+table tr th a img:hover {
+	transform: scale(1.5);
+}
+
 
 
 
